@@ -7,11 +7,12 @@ type Usuario = {
 };
 
 type NovoUsuario = Omit<Usuario, "rg">;
+type DadosUsuario = Required<NovoUsuario>;
 
 const cadastrarUsuario = (info: Usuario): Usuario => {
   return info;
 };
 
-const novoCadastro = (info: Omit<Usuario, "rg">): NovoUsuario => {
+const novoCadastro = (info: DadosUsuario): DadosUsuario => {
   return info;
 };
